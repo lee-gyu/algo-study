@@ -19,38 +19,26 @@ function solution(land) {
 
         copyLand[r][c] = sectionId;
 
+        function extendAction(r, c) {
+            // 유효한 범위 확인
+            if (copyLand[r] && copyLand[r][c] === 0 && land[r][c]) {
+                // 메모리에 mark 및 stack에 추가
+                copyLand[r][c] = sectionId;
+                stack.push([r, c]);
+            }
+        }
+
         while (stack.length) {
             const [r, c] = stack.pop();
 
             // 현재 구역의 크기 증가
             ++sectionLength;
 
-            // 상하좌우 확인하고,
-            // 지금 갈 수 있는 구역이면 stack에 넣기
-            if (copyLand[r][c - 1] === 0 && land[r][c - 1] > 0) {
-                copyLand[r][c - 1] = sectionId;
-                stack.push([r, c - 1]);
-            }
-            if (copyLand[r][c + 1] === 0 && land[r][c + 1] > 0) {
-                copyLand[r][c + 1] = sectionId;
-                stack.push([r, c + 1]);
-            }
-            if (
-                copyLand[r + 1] &&
-                copyLand[r + 1][c] === 0 &&
-                land[r + 1][c] > 0
-            ) {
-                copyLand[r + 1][c] = sectionId;
-                stack.push([r + 1, c]);
-            }
-            if (
-                copyLand[r - 1] &&
-                copyLand[r - 1][c] === 0 &&
-                land[r - 1][c] > 0
-            ) {
-                copyLand[r - 1][c] = sectionId;
-                stack.push([r - 1, c]);
-            }
+            // 상하좌우 확인하고, 지금 갈 수 있는 구역이면 stack에 넣기
+            extendAction(r, c - 1);
+            extendAction(r, c + 1);
+            extendAction(r - 1, c);
+            extendAction(r + 1, c);
         }
 
         sectionSize[sectionId] = sectionLength;
