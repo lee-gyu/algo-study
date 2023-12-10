@@ -9,7 +9,7 @@
         "prepare": "husky install",
         "test": "vitest --run",
         "test:watch": "vitest",
-        "lint": "eslint src/**"
+        "lint": "eslint src/** --ignore-pattern *.tmp.js"
     },
     "keywords": [],
     "author": "",
