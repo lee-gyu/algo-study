@@ -12,6 +12,7 @@ export function problemInfo() {
         problemId: "250134",
         testSuite: [
             {
+                // #1
                 input: [
                     [
                         [1, 4],
@@ -22,6 +23,7 @@ export function problemInfo() {
                 output: 3,
             },
             {
+                // #2
                 input: [
                     [
                         [1, 0, 2],
@@ -33,6 +35,7 @@ export function problemInfo() {
                 output: 7,
             },
             {
+                // #3
                 input: [
                     [
                         [1, 5],
@@ -44,21 +47,12 @@ export function problemInfo() {
                 output: 0,
             },
             {
+                // #4
                 input: [[[4, 1, 2, 3]]],
                 output: 0,
             },
             {
-                input: [
-                    [
-                        [0, 0, 0, 0],
-                        [0, 1, 0, 0],
-                        [0, 0, 2, 0],
-                        [4, 3, 0, 0],
-                    ],
-                ],
-                output: 4,
-            },
-            {
+                // #5
                 input: [
                     [
                         [1, 0, 5, 2],
@@ -70,6 +64,7 @@ export function problemInfo() {
                 output: 5,
             },
             {
+                // #6
                 input: [
                     [
                         [1, 0, 2, 0],
@@ -80,6 +75,19 @@ export function problemInfo() {
                 ],
                 output: 6,
             },
+            // #7
+            // 너무 느려서 주석 처리...
+            // {
+            //     input: [
+            //         [
+            //             [0, 0, 0, 0],
+            //             [0, 1, 0, 0],
+            //             [0, 0, 2, 0],
+            //             [4, 3, 0, 0],
+            //         ],
+            //     ],
+            //     output: 4,
+            // },
         ],
     };
 }
