@@ -1,2 +1,4 @@
 node_modules/
 .memo/
+
+*.tmp.js
