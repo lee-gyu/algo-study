@@ -5,12 +5,12 @@ export function testRunner(userName, problemInfo, solutionFunc, runIds = []) {
     let caseId = 0;
 
     for (const testCase of testSuite) {
-        ++caseId;
+        const tmpId = ++caseId;
         // runIds가 있으면 해당 id만 실행
         if (runIds.length > 0 && !runIds.includes(caseId)) continue;
 
         describe(`${problemId}@${userName}`, () => {
-            test(`#${caseId}`, () => {
+            test(`#${tmpId}`, () => {
                 const { input, output } = testCase;
                 const solutionOutput = solutionFunc(...input);
 
