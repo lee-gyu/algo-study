@@ -30,8 +30,9 @@ function solution(maze) {
      */
     const [redLoc, blueLoc] = findInitLoc();
     const visited = createInitVisited();
+    let result = NOT_FOUND;
 
-    const result = find(redLoc, blueLoc, 1, 2, 0);
+    result = find(redLoc, blueLoc, 1, 2, 0);
 
     // 가능한 경우 없음
     if (result === NOT_FOUND) return 0;
@@ -107,7 +108,6 @@ function solution(maze) {
 
     function runNextLoc(loc1, loc2, val, turn) {
         const nextVal = val === 1 ? 2 : 1;
-        let result = NOT_FOUND;
 
         // 다 도착한 경우 턴 수 return
         if (
@@ -157,6 +157,9 @@ function solution(maze) {
     }
 
     function find(loc1, loc2, loc1Val, loc2Val, turn) {
+        // 이미 최소 턴을 넘어선 경우 return 처리
+        if (turn > result) return NOT_FOUND;
+
         return Math.min(
             runNextLoc(loc1, loc2, loc1Val, turn),
             runNextLoc(loc2, loc1, loc2Val, turn)
