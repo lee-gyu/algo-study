@@ -5,6 +5,8 @@
         "es6": true
     },
     "parserOptions": {
-        "sourceType": "module"
+        "sourceType": "module",
+        // 프로그래머스가 node 16을 지원하므로, ecmascript version은 2020으로 지정
+        "ecmaVersion": 2020
     }
 }
