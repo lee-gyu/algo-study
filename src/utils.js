@@ -1,12 +1,16 @@
 import { describe, test, expect } from "vitest";
 
-export function testRunner(userName, problemInfo, solutionFunc) {
+export function testRunner(userName, problemInfo, solutionFunc, runIds = []) {
     const { problemId, testSuite } = problemInfo();
     let caseId = 0;
 
     for (const testCase of testSuite) {
+        ++caseId;
+        // runIds가 있으면 해당 id만 실행
+        if (runIds.length > 0 && !runIds.includes(caseId)) continue;
+
         describe(`${problemId}@${userName}`, () => {
-            test(`#${++caseId}`, () => {
+            test(`#${caseId}`, () => {
                 const { input, output } = testCase;
                 const solutionOutput = solutionFunc(...input);
 
