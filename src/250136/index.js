@@ -1,3 +1,11 @@
+/**
+ * 문제유형: 탐색 (DFS, BFS)
+ * level: 2
+ * @link https://school.programmers.co.kr/learn/courses/30/lessons/250136
+ */
+
+// ---
+
 export function problemInfo() {
     return {
         problemId: "250136",
