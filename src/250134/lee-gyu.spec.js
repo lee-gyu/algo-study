@@ -3,6 +3,11 @@ import { problemInfo } from "./index";
 
 testRunner("lee-gyu", problemInfo, solution);
 
+/**
+ * 이 풀이는 시간 복잡도가 매우 높음 (브루트포스로 각 수레 이동 경우의 수를 모두 확인함)
+ * 시간 복잡도: O(4^15) (최대 수레는 15번 이동할 수 있음, 약 10억번 연산? 수레가 2개이니 훨씬 더 크며 js이므로 오버헤드가 더욱 클 것임)
+ */
+
 const NOT_FOUND = 9999;
 
 function solution(maze) {
