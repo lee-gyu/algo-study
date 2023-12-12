@@ -9,15 +9,15 @@ testRunner("lee-gyu", problemInfo, solution);
 
 function solution(info, edges) {
     const visited = {};
-    const answer = [];
+    let result = 0;
 
     visited[0] = true;
     dfs(1, 0);
 
-    return Math.max(...answer);
+    return result;
 
     function dfs(sheep, wolf) {
-        if (sheep > wolf) answer.push(sheep);
+        if (sheep > wolf) result = Math.max(result, sheep);
         else return;
 
         for (const [parent, child] of edges) {
