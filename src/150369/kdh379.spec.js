@@ -11,8 +11,9 @@ function solution(cap, n, deliveries, pickups) {
         removeTrailingZero(deliveries);
         removeTrailingZero(pickups);
 
-        //한번은 최대 거리까지 가야 함
-        // 둘 중 더 먼 거리를 합해주고 왕복이니까 *2
+        // 한번은 최대 거리까지 가야 함
+        // 배달할 박스나 수거할 박스가 i번째에 존재한다면 결국 반드시 한번은 가야함
+        // = 둘 중 더 먼 거리를 합해주고 왕복이니까 *2
         distance += Math.max(deliveries.length, pickups.length) * 2;
 
         trackingParcel(deliveries);
