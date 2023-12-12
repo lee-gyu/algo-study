@@ -9,7 +9,7 @@ testRunner("kdh379", problemInfo, solution);
 1분 = 초침 한바퀴 = 2번 만남
 하루 = 1440분 = 2880번
 59분 -> 00분 때 분침 초침은 안만남 = -24
-11시 59분 -> 12시, 23시 59분 > 00시 갈 때 시침 초침 안만남 = -2
+11시 59분 -> 12시, 23시 59분 > 00시 갈 때 시침/분침은 초침과 안만남 = -2
 
  */
 function solution(h1, m1, s1, h2, m2, s2) {
@@ -37,7 +37,7 @@ function solution(h1, m1, s1, h2, m2, s2) {
         const mCount = h * 60 + m;
         acrossCount += mCount * 2; // 분당 2번씩 겹침
         acrossCount -= h; // 59분 -> 00분 때 분침 초침은 안만남
-        if (h >= 12) acrossCount -= 2; // 11시 59분 59초 -> 12시인 경우 초침이 분/시침과 안만남
+        if (h >= 12) acrossCount -= 2; // 11시 59분 59초 -> 12시인 경우 시침/분침은 초침과 안만남 = -2
 
         return acrossCount;
     }
