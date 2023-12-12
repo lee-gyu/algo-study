@@ -1,5 +1,5 @@
 /**
- * 문제유형: 그래프, 다익스트라
+ * 문제유형: 트리, 다익스트라
  *
  * level: 3
  * @link https://school.programmers.co.kr/learn/courses/30/lessons/92343
@@ -29,17 +29,6 @@ export function problemInfo() {
                     ],
                 ],
                 output: 5,
-            },
-            {
-                input: [
-                    [
-                        [1, 2],
-                        [2, 4],
-                        [3, 4],
-                        [5, 6],
-                    ],
-                ],
-                output: 3,
             },
             {
                 input: [
