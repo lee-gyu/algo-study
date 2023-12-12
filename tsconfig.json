@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "allowJs": true,
+        "types": ["vitest/globals"],
+        "noEmit": true,
+        "lib": ["ES2020"],
+        "paths": {
+            "@utils": ["src/utils"]
+        }
+    },
+    "include": ["src/**/*"]
+}
