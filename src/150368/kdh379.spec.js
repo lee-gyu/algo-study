@@ -26,7 +26,7 @@ function solution(users, emoticons) {
     function dfs(index) {
         if (index === emoticonsLength) {
             const [signCount, cost] = calculateCost();
-            console.log(discountKind, signCount, cost);
+
             // 가입자 수가 더 많거나, 가입자 수가 같은데 총 비용이 더 많으면 갱신
             if (
                 signCount > answer[0] ||
