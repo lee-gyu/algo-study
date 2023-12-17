@@ -18,6 +18,29 @@ testRunner("lee-gyu", problemInfo, solution);
 // 12: [10 40], 13: [20 40]
 // 14: [30 40], 15: [40 40]
 
+/**
+테스트 1 〉	통과 (0.24ms, 33.4MB)
+테스트 2 〉	통과 (0.31ms, 33.4MB)
+테스트 3 〉	통과 (0.75ms, 33.8MB)
+테스트 4 〉	통과 (3.00ms, 37.6MB)
+테스트 5 〉	통과 (11.20ms, 38.1MB)
+테스트 6 〉	통과 (22.35ms, 37.2MB)
+테스트 7 〉	통과 (29.89ms, 38.2MB)
+테스트 8 〉	통과 (11.37ms, 37.9MB)
+테스트 9 〉	통과 (13.71ms, 38.1MB)
+테스트 10 〉	통과 (11.44ms, 38.1MB)
+테스트 11 〉	통과 (31.27ms, 38.1MB)
+테스트 12 〉	통과 (17.93ms, 38.1MB)
+테스트 13 〉	통과 (93.88ms, 38.1MB)
+테스트 14 〉	통과 (91.94ms, 38.1MB)
+테스트 15 〉	통과 (30.65ms, 38.3MB)
+테스트 16 〉	통과 (14.14ms, 38MB)
+테스트 17 〉	통과 (0.66ms, 33.7MB)
+테스트 18 〉	통과 (10.62ms, 38.1MB)
+테스트 19 〉	통과 (0.26ms, 33.5MB)
+테스트 20 〉	통과 (0.26ms, 33.4MB)
+ */
+
 const DISCOUNT_RATES = [10, 20, 30, 40];
 
 function solution(users, emoticons) {
@@ -30,10 +53,10 @@ function solution(users, emoticons) {
         let totalRevenue = 0;
 
         for (const [userRate, userCost] of users) {
-            const amountOfEmoji = sumOfCosts(i, userRate);
+            const userAmount = sumOfCosts(i, userRate);
 
-            if (amountOfEmoji >= userCost) ++numOfRegister;
-            else totalRevenue += amountOfEmoji;
+            if (userAmount >= userCost) ++numOfRegister;
+            else totalRevenue += userAmount;
         }
 
         if (
