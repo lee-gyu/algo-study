@@ -6,8 +6,6 @@
  * @link https://tech.kakao.com/2022/01/14/2022-kakao-recruitment-round-1/
  */
 
-// 아직 미완,, 케이스 3개 미통과임
-
 // ---
 
 export function problemInfo() {
