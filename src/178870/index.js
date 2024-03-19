@@ -1,5 +1,5 @@
 /**
- * 문제유형: dfs
+ * 문제유형: 투 포인터
  * level: 2
  * @link https://school.programmers.co.kr/learn/courses/30/lessons/181187
  */
