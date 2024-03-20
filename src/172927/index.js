@@ -8,7 +8,7 @@
 
 export function problemInfo() {
     return {
-        problemId: "176962",
+        problemId: "172927",
         testSuite: [
             {
                 input: [
