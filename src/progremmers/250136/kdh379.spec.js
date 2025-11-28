@@ -1,5 +1,5 @@
 import { problemInfo } from ".";
-import { testRunner } from "../utils";
+import { testRunner } from "../../utils";
 
 testRunner("kdh79", problemInfo, solution);
 

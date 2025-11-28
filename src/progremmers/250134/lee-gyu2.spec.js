@@ -1,4 +1,4 @@
-import { testRunner } from "../utils";
+import { testRunner } from "../../utils";
 import { problemInfo } from "./index";
 
 testRunner("lee-gyu2", problemInfo, solution);
