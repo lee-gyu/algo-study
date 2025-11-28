@@ -1,5 +1,6 @@
 node_modules/
 .memo/
+.turbo
 
 *.tmp.js
 *.tmp.ts

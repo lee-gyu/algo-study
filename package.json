@@ -1,5 +1,6 @@
 {
     "name": "algo-study",
+    "preview": true,
     "version": "1.0.0",
     "description": "",
     "type": "module",
@@ -10,20 +11,23 @@
         "test": "vitest --run",
         "test:watch": "vitest",
         "test:ui": "vitest --ui",
-        "lint": "eslint src/**"
+        "lint": "eslint src/**",
+        "turbo:test": "turbo run test",
+        "turbo:lint": "turbo run lint"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
+    "packageManager": "pnpm@10.24.0",
     "devDependencies": {
-        "@types/node": "^20.10.4",
-        "@typescript-eslint/eslint-plugin": "^6.14.0",
-        "@typescript-eslint/parser": "^6.14.0",
-        "@vitest/ui": "^1.0.4",
-        "eslint": "^8.55.0",
-        "husky": "^8.0.0",
-        "typescript": "^5.3.3",
-        "vite-tsconfig-paths": "^4.2.2",
-        "vitest": "^1.0.2"
+        "@eslint/js": "^9.39.1",
+        "@types/node": "^22.19.1",
+        "eslint": "^9.39.1",
+        "husky": "^9.1.7",
+        "turbo": "^2.6.1",
+        "typescript": "^5.9.3",
+        "typescript-eslint": "^8.48.0",
+        "vite-tsconfig-paths": "^5.1.4",
+        "vitest": "^4.0.14"
     }
 }

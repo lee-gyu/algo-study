@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 type ProblemInfoFunc<T_Input, T_Output> = () => {
     problemId: string;
     testSuite: TestCase<T_Input, T_Output>[];

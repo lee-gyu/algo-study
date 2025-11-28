@@ -87,16 +87,16 @@ function solution(maze) {
         const canMovLocList = [];
 
         // 상
-        canMove(visited, r - 1, c, val, lockLoc) &&
+        if(canMove(visited, r - 1, c, val, lockLoc))
             canMovLocList.push({ r: r - 1, c });
         // 하
-        canMove(visited, r + 1, c, val, lockLoc) &&
+        if(canMove(visited, r + 1, c, val, lockLoc))
             canMovLocList.push({ r: r + 1, c });
         // 좌
-        canMove(visited, r, c - 1, val, lockLoc) &&
+        if(canMove(visited, r, c - 1, val, lockLoc))
             canMovLocList.push({ r, c: c - 1 });
         // 우
-        canMove(visited, r, c + 1, val, lockLoc) &&
+        if(canMove(visited, r, c + 1, val, lockLoc))
             canMovLocList.push({ r, c: c + 1 });
 
         return canMovLocList;
