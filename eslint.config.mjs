@@ -5,4 +5,12 @@ import eslint from '@eslint/js';
 export default defineConfig(
     eslint.configs.recommended,
     tseslint.configs.recommended,
+    {
+        rules: {
+            // testRunner는 허용
+            "no-undef": ["off", {
+                "typeof": true
+            }],
+        }
+    }
 );

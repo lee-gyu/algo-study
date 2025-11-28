@@ -4,11 +4,18 @@
         "allowJs": true,
         "types": ["vitest/globals"],
         "noEmit": true,
-        "lib": ["ES2020"],
+        "target": "esnext",
+        "module": "esnext",
+        "lib": ["ESNext"],
+        "moduleResolution": "bundler",
         "paths": {
             "@utils": ["src/utils"]
         },
         "strict": false
     },
-    "include": ["src/**/*"]
+    "include": [
+        "src/**/*",
+        "types/**/*",
+        "tests/**/*"
+    ]
 }

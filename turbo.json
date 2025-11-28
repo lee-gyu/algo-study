@@ -3,12 +3,12 @@
     "ui": "tui",
     "tasks": {
         "test-cache": {
-            "inputs": ["src/**"],
+            "inputs": ["src/**", "tests/**"],
             "outputs": [],
             "cache": true
         },
         "lint-cache": {
-            "inputs": ["src/**"],
+            "inputs": ["src/**", "tests/**"],
             "outputs": [],
             "cache": true
         }
